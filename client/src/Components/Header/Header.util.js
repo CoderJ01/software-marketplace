@@ -14,7 +14,7 @@ export function setDrawer(handleDrawerToggle) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ my: 2 }}>
-            MUI
+            Software Marketplace
           </Typography>
           <Divider />
           <List>
