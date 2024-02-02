@@ -41,11 +41,14 @@ const initialValues = {
 }
 
 const options = [
-  { label: "Computer Programmer", value: "Computer_programmer" },
-  { label: "Web Developer", value: "web_developer" },
-  { label: "User Experience Designer", value: "user_experience_designer" },
-  { label: "Systems Analyst", value: "systems_analyst" },
-  { label: "Quality Assurance Tester", value: "quality_assurance_tester" },
+  { label: "Automotive", value: "automotive" },
+  { label: "Beauty", value: "beauty" },
+  { label: "Education", value: "education" },
+  { label: "Healthcare", value: "health_care" },
+  { label: "Information Technology", value: "information_technology" },
+  { label: "Legal", value: "legal" },
+  { label: "Restaurant", value: "restaurant" },
+  { label: "Retail", value: "retail" },
 ]
 
 //password validation
@@ -118,7 +121,7 @@ const RegistrationForm = () => {
                       <Grid item xs={12} sm={6} md={12}>
                         <FormControl fullWidth variant="outlined">
                           <InputLabel id="demo-simple-select-outlined-label">
-                            Occupation
+                            Industry
                           </InputLabel>
                           <Select
                             labelId="demo-simple-select-outlined-label"
@@ -159,7 +162,7 @@ const RegistrationForm = () => {
                       </Grid>
                       <Grid item xs={12} sm={6} md={6}>
                         <Field
-                          label="Email"
+                          label="Email or Username"
                           variant="outlined"
                           fullWidth
                           name="email"
