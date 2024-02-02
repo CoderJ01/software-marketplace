@@ -28,7 +28,7 @@ const LoginForm = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={onSubmit}>
-            {({ dirty, isValid, values, handleChange, handleBlur }) => {
+            {({ dirty, isValid, values }) => {
               return (
                 <Form>
                   <CardContent>
