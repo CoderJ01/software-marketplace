@@ -24,6 +24,9 @@ const useStyle = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
+  margin: {
+    marginTop: '15vh',
+  }
 }))
 
 //Data
@@ -78,7 +81,7 @@ const RegistrationForm = () => {
   }
 
   return (
-    <Grid container justify="center" spacing={1}>
+    <Grid container justify="center" spacing={1} className={classes.margin}>
       <Grid item md={6}>
         <Card className={classes.padding}>
           <CardHeader title="REGISTER FORM"></CardHeader>
