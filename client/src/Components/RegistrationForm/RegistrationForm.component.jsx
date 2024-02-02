@@ -103,7 +103,7 @@ const RegistrationForm = () => {
                       </Grid>
                       <Grid item xs={12} sm={6} md={6}>
                         <Field
-                          label="Email or Username"
+                          label="Email"
                           variant="outlined"
                           fullWidth
                           name="email"
