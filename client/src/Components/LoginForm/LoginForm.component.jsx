@@ -11,7 +11,7 @@ import {
 import { Formik, Form, Field } from "formik"
 import { TextField } from "formik-material-ui"
 
-import { useStyle, initialValues, validationSchema } from "../RegistrationForm/RegistrationForm.util"
+import { useStyle, initialValues } from "../RegistrationForm/RegistrationForm.util"
 
 const LoginForm = () => {
   const classes = useStyle()
@@ -27,7 +27,6 @@ const LoginForm = () => {
           <CardHeader title="LOGIN HERE"></CardHeader>
           <Formik
             initialValues={initialValues}
-            validationSchema={validationSchema}
             onSubmit={onSubmit}>
             {({ dirty, isValid, values, handleChange, handleBlur }) => {
               return (
