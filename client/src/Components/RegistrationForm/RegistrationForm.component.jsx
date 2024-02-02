@@ -28,7 +28,7 @@ const RegistrationForm = () => {
     <Grid container justify="center" spacing={1} className={classes.margin}>
       <Grid item md={6}>
         <Card className={classes.padding}>
-          <CardHeader title="REGISTER FORM"></CardHeader>
+          <CardHeader title="SIGN UP HERE"></CardHeader>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
