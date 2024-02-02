@@ -31,6 +31,7 @@ export const options = [
     { label: "Automotive", value: "automotive" },
     { label: "Beauty", value: "beauty" },
     { label: "Education", value: "education" },
+    { label: "Finance", value: "finance" },
     { label: "Healthcare", value: "health_care" },
     { label: "Information Technology", value: "information_technology" },
     { label: "Legal", value: "legal" },
