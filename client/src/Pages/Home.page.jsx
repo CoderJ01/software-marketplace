@@ -2,11 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { Container } from '@material-ui/core';
 import Typography from '@mui/material/Typography';
+import neonKeyboard from '../assets/images/neon-keyboard.jpg'
 
 function Homepage() {
   return (
     <>
-        <img style={{ height: '60vh', width: '100%'}} src={"https://cdn.creatureandcoagency.com/uploads/2014/06/Bottlenose-Dolphin-Facts-2.jpg"}></img>
+        <img style={{ height: '60vh', width: '100%'}} src={neonKeyboard}></img>
         <Container 
             style={{ 
                 border: '1px solid purple', 
