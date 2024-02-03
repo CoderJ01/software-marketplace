@@ -10,7 +10,6 @@ function Homepage() {
         <img style={{ height: '60vh', width: '100%'}} src={neonKeyboard}></img>
         <Container 
             style={{ 
-                border: '1px solid purple', 
                 display: 'flex', 
                 justifyContent: 'center',
                 paddingBottom: '5vh',
@@ -18,7 +17,7 @@ function Homepage() {
             }} 
             maxWidth='lg'
         >
-            <Box sx={{ width: '100%', maxWidth: 500, border: '1px solid red' }}>
+            <Box sx={{ width: '100%', maxWidth: 500 }}>
             <Typography variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
                 A Market for Software
             </Typography>
