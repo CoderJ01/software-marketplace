@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { Container } from '@material-ui/core';
 import Typography from '@mui/material/Typography';
-import neonKeyboard from '../assets/images/neon-keyboard.jpg'
+import neonKeyboard from '../../assets/images/neon-keyboard.jpg'
 import Button from '@mui/material/Button';
 
 function Homepage() {

@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Components/Header/Header.component';
 // import RegistrationForm from './Components/RegistrationForm/RegistrationForm.component';
 // import LoginForm from './Components/LoginForm/LoginForm.component';
-import Homepage from './Pages/Home.page';
+import Homepage from './Pages/Home/Home.page';
 
 function App() {
   return (
