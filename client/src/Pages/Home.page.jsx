@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Container } from '@material-ui/core';
 import Typography from '@mui/material/Typography';
 import neonKeyboard from '../assets/images/neon-keyboard.jpg'
+import Button from '@mui/material/Button';
 
 function Homepage() {
   return (
@@ -18,13 +19,14 @@ function Homepage() {
             maxWidth='lg'
         >
             <Box sx={{ width: '100%', maxWidth: 500 }}>
-            <Typography variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
-                A Market for Software
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-                Greetings! Are you looking for a specific piece of software for your website, be it a form or table?
-                If so, you've come to the right place. Search this site for a variety of tools you can use for your website.
-            </Typography>
+                <Typography variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
+                    A Market for Software
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                    Greetings! Are you looking for a specific piece of software for your website, be it a form or table?
+                    If so, you've come to the right place. Search this site for a variety of tools you can use for your website.
+                </Typography>
+                <Button variant="contained" style={{ marginTop: '2vh', marginLeft: '35%', width: '30%' }}>See Software</Button>
             </Box>
         </Container>
     </>
