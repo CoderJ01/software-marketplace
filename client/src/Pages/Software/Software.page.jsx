@@ -11,7 +11,6 @@ function Software() {
         <img style={{ height: '60vh', width: '100%'}} src={neonKeyboard}></img>
         <Container 
             style={{ 
-                border: 'green solid 2px',
                 display: 'flex', 
                 justifyContent: 'center',
                 paddingBottom: '5vh',
@@ -19,7 +18,7 @@ function Software() {
             }} 
             maxWidth='lg'
         >
-            <Box sx={{ width: '150%', maxWidth: 1000, border: '1px solid red' }}>
+            <Box sx={{ width: '150%', maxWidth: 1000 }}>
                 <Typography variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
                     Software
                 </Typography>
