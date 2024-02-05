@@ -4,11 +4,12 @@ import { Container } from '@material-ui/core';
 import Typography from '@mui/material/Typography';
 import neonKeyboard from '../../assets/images/neon-keyboard.jpg'
 import Button from '@mui/material/Button';
+import './Home.style.css';
 
 function Homepage() {
   return (
     <>
-        <img style={{ height: '60vh', width: '100%'}} src={neonKeyboard}></img>
+        <img className={'neon-keyboard'} style={{ height: '60vh', width: '100%'}} src={neonKeyboard}></img>
         <Container 
             style={{ 
                 display: 'flex', 
@@ -19,7 +20,7 @@ function Homepage() {
             maxWidth='lg'
         >
             <Box sx={{ width: '100%', maxWidth: 500 }}>
-                <Typography variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
+                <Typography className={"heading"} variant="h6" gutterBottom style={{ display: 'flex', justifyContent:'center' }}>
                     A Market for Software
                 </Typography>
                 <Typography variant="body1" gutterBottom>

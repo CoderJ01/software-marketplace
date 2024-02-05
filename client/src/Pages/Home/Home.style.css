@@ -1,0 +1,10 @@
+/* Mobile View */
+@media screen and (max-width: 980px) {
+    .neon-keyboard {
+        display: none;
+    }
+
+    .heading {
+        margin-top: 10vh;
+    }
+}
