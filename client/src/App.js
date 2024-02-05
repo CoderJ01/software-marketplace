@@ -16,8 +16,8 @@ import LoginForm from './Components/LoginForm/LoginForm.component';
 function App() {
   return (
     <div className='App'>
-      <Header/>
        <BrowserRouter>
+            <Header/>
             <Routes>
                 <Route path='/' element={<Homepage/>}/>
                 <Route path='/software' element={<Software/>}/>
