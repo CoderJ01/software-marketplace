@@ -35,3 +35,15 @@ export function setContainer(window) {
     const container = window !== undefined ? () => window().document.body : undefined;
     return container;
 }
+
+export function displayPage(item, navigate) {
+  if(item === 'Home') {
+    navigate('/');
+  }
+  else if(item === 'Login') {
+    navigate('/login');
+  }
+  else if(item === 'Sign Up') {
+    navigate('/sign-up');
+  }
+}
