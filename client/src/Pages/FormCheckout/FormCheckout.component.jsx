@@ -43,7 +43,13 @@ export default function FormCheckout() {
     }
 
     function handleCheckmark(e) {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        if(e.target.value === false) {
+            setFormData({ ...formData, [e.target.name]: true });
+        }
+        else {
+            setFormData({ ...formData, [e.target.name]: false })
+        }
+        console.log(e.target.value);
     }
     return (
         <Box sx={{ width: '100%' }} style={{ marginTop: '100px' }}>
