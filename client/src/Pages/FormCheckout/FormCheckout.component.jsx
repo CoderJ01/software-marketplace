@@ -38,6 +38,7 @@ export default function FormCheckout() {
         numberOfForms: 0, 
     });
     const [errorMessage, setErrorMessage] = useState('');
+    const [fields, setFields] = useState([]);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -75,11 +76,14 @@ export default function FormCheckout() {
 
         setErrorMessage('');
         console.log(formData);
+        console.log(fields);
+        console.log(formData.extraFields);
     }
 
     function handleCheckmark(e) {
         if(formData[e.target.name] === false) {
             setFormData({ ...formData, [e.target.name]: true });
+            setFields([...fields, e.target.name.toString()]);
         }
         else if(formData[e.target.name] === true) {
             setFormData({ ...formData, [e.target.name]: false });
@@ -100,7 +104,7 @@ export default function FormCheckout() {
                                 required
                                 variant="outlined"
                                 color="secondary"
-                                type="email"
+                                type="text"
                                 sx={{mb: 3}}
                                 fullWidth
                                 name="formName"
@@ -142,10 +146,10 @@ export default function FormCheckout() {
                                         required
                                         style={{ width: '40%' }}
                                         label="Additional Fields"
-                                        onChange={''}
+                                        onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
                                         variant="outlined"
                                         color="secondary"
-                                        type="email"
+                                        type="text"
                                         sx={{mb: 3}}
                                         fullWidth
                                         name="extraFields"
