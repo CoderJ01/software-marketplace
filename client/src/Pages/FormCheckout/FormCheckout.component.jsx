@@ -77,7 +77,9 @@ export default function FormCheckout() {
         setErrorMessage('');
         let fieldObj = formData.extraFields.split(',');
         for(let i = 0; i < fieldObj.length; i++) {
-            setFields([...fields, fieldObj[i]]);
+            if(fieldObj[i] != '' || fieldObj[i] != 'Other') {
+                setFields([...fields, fieldObj[i]]);
+            }
         }
         fieldObj = [];
         console.log(fields);
