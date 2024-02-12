@@ -34,6 +34,7 @@ export default function FormCheckout() {
         phoneNumber: false, 
         other: false,
         // 
+        extraFields: '',
         numberOfForms: 0, 
     });
 
@@ -104,6 +105,7 @@ export default function FormCheckout() {
                                     <Typography variant="body" style={{ textAlign: 'left' }}>Add any additional fields you want your form to display.</Typography>
                                     <Typography variant="body" style={{ textAlign: 'left' }}>Separate the names of the fields using commas.</Typography>
                                     <TextField 
+                                        required
                                         style={{ width: '40%' }}
                                         label="Additional Fields"
                                         onChange={''}
@@ -112,8 +114,8 @@ export default function FormCheckout() {
                                         type="email"
                                         sx={{mb: 3}}
                                         fullWidth
-                                        name="formName"
-                                        value={''}
+                                        name="extraFields"
+                                        value={formData.extraFields}
                                     />
                                     </>
                                 )
