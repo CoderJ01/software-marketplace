@@ -48,7 +48,12 @@ export default function FormCheckout() {
         }
 
         if(formData.other === true && formData.extraFields === '') {
-            setErrorMessage('Additional fileds are required. If you want no additional fields, uncheck \'Other\'.');
+            setErrorMessage('Additional fileds are required. If you want no additional fields, uncheck \'Other\'');
+            return;
+        }
+
+        if(formData.numberOfForms === 0) {
+            setErrorMessage('You must select the number of forms you want!');
             return;
         }
 
