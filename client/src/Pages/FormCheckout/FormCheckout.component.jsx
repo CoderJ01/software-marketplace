@@ -75,9 +75,12 @@ export default function FormCheckout() {
         }
 
         setErrorMessage('');
-        console.log(formData);
+        let fieldObj = formData.extraFields.split(',');
+        for(let i = 0; i < fieldObj.length; i++) {
+            setFields([...fields, fieldObj[i]]);
+        }
+        fieldObj = [];
         console.log(fields);
-        console.log(formData.extraFields);
     }
 
     function handleCheckmark(e) {
