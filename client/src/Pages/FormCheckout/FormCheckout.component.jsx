@@ -51,8 +51,6 @@ export default function FormCheckout() {
         }
     }
 
-    console.log(formData.firstName);
-
     return (
         <Box sx={{ width: '100%' }} style={{ marginTop: '100px' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
