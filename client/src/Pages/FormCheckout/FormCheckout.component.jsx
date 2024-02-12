@@ -47,8 +47,24 @@ export default function FormCheckout() {
             return;
         }
 
+        if(
+            formData.firstName === false &&
+            formData.lastName === false &&
+            formData.email === false &&
+            formData.username === false &&
+            formData.password === false &&
+            formData.city === false &&
+            formData.state === false &&
+            formData.phoneNumber === false &&
+            formData.other === false
+        )
+        {
+            setErrorMessage('The form must have at least one field!');
+            return;
+        }
+
         if(formData.other === true && formData.extraFields === '') {
-            setErrorMessage('Additional fileds are required. If you want no additional fields, uncheck \'Other\'');
+            setErrorMessage('Additional fields are required. If you want no additional fields, uncheck \'Other\'!');
             return;
         }
 
@@ -71,7 +87,7 @@ export default function FormCheckout() {
     }
 
     return (
-        <Box sx={{ width: '100%' }} style={{ marginTop: '100px' }}>
+        <Box sx={{ width: '100%' }} style={{ marginTop: '100px', paddingBottom: '5vh' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid xs={6}>
                 <Item>
@@ -159,7 +175,7 @@ export default function FormCheckout() {
                                 ))}
                             </TextField>
                             <br/>
-                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ width: '20%' }}>Submit</Button>
+                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '40%', width: '20%' }}>Submit</Button>
                         </form>
                     </React.Fragment>
                     <br/>
@@ -167,7 +183,20 @@ export default function FormCheckout() {
                 </Item>
             </Grid>
             <Grid xs={6}>
-            <Item>2</Item>
+                <Item style={{ display: 'flex', flexDirection: 'column' }}>
+                    <h2>Form Contents</h2>
+                    <br/>
+                    <Typography style={{ textAlign: 'left' }} variant="h6">Name: {formData.formName}</Typography>
+                    <br/>
+                    <Typography style={{ textAlign: 'left' }} variant="h6">Fields: </Typography>
+                    <br/>
+                    <Typography style={{ textAlign: 'left' }} variant="h6">Amount: {formData.amount}</Typography>
+                    <br/>
+                    <Typography style={{ textAlign: 'left' }} variant="h6">Price: $50.00</Typography>
+                    <br/>
+                    <Button variant="outlined" color="secondary" type="submit" style={{ marginLeft: '30%', width: '40%' }}>Confirm Order</Button>
+                    <br/>
+                </Item>
             </Grid>
         </Grid>
         </Box>
