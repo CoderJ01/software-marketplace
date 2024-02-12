@@ -23,18 +23,18 @@ const number = ['1', '2', '3'];
 export default function FormCheckout() {
     const [formData, setFormData] = useState({ 
         formName: '', 
-        fields: { 
-            firstName: false, 
-            lastName: false, 
-            email: false, 
-            username: false, 
-            password: false, 
-            city: false, 
-            state: false, 
-            phoneNumber: false, 
-            other: false 
-        }, 
-            numberOfForms: 0, 
+        // checkboxes
+        firstName: false,
+        lastName: false, 
+        email: false, 
+        username: false, 
+        password: false, 
+        city: false, 
+        state: false, 
+        phoneNumber: false, 
+        other: false,
+        // 
+        numberOfForms: 0, 
     });
 
     function handleSubmit(e) {
@@ -43,14 +43,16 @@ export default function FormCheckout() {
     }
 
     function handleCheckmark(e) {
-        if(e.target.value === false) {
+        if(formData[e.target.name] === false) {
             setFormData({ ...formData, [e.target.name]: true });
         }
-        else {
-            setFormData({ ...formData, [e.target.name]: false })
+        else if(formData[e.target.name] === true) {
+            setFormData({ ...formData, [e.target.name]: false });
         }
-        console.log(e.target.value);
     }
+
+    console.log(formData.firstName);
+
     return (
         <Box sx={{ width: '100%' }} style={{ marginTop: '100px' }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -76,23 +78,23 @@ export default function FormCheckout() {
                                 <Grid container spacing={3}>
                                     <Grid xs>
                                         <Item elevation={0} style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <FormControlLabel name="fields.firstName" value={formData.fields.firstName} control={<Checkbox />} label="First Name" onClick={handleCheckmark}/>
-                                            <FormControlLabel value={formData.fields.lastName} control={<Checkbox />} label="Last Name" />
-                                            <FormControlLabel value={formData.fields.email} control={<Checkbox />} label="Email" />
+                                            <FormControlLabel name="firstName" value={formData.firstName} control={<Checkbox />} label="First Name" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="lastName" value={formData.lastName} control={<Checkbox />} label="Last Name" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="email" value={formData.email} control={<Checkbox />} label="Email" onClick={handleCheckmark}/>
                                         </Item>
                                     </Grid>
                                     <Grid xs>
                                         <Item elevation={0} style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <FormControlLabel value={formData.fields.username} control={<Checkbox />} label="Username" />
-                                            <FormControlLabel value={formData.fields.password} control={<Checkbox />} label="Passowrd" />
-                                            <FormControlLabel value={formData.fields.city} control={<Checkbox />} label="City" />
+                                            <FormControlLabel name="username" value={formData.username} control={<Checkbox />} label="Username" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="password" value={formData.password} control={<Checkbox />} label="Passowrd" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="city" value={formData.city} control={<Checkbox />} label="City" onClick={handleCheckmark}/>
                                         </Item>
                                     </Grid>
                                     <Grid xs>
                                         <Item elevation={0} style={{ display: 'flex', flexDirection: 'column' }}>
-                                            <FormControlLabel value={formData.fields.state} control={<Checkbox />} label="State" />
-                                            <FormControlLabel value={formData.fields.phoneNumber} control={<Checkbox />} label="Phone Number" />
-                                            <FormControlLabel value={formData.fields.other} control={<Checkbox />} label="Other" />
+                                            <FormControlLabel name="state" value={formData.state} control={<Checkbox />} label="State" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="phoneNumber" value={formData.phoneNumber} control={<Checkbox />} label="Phone Number" onClick={handleCheckmark}/>
+                                            <FormControlLabel name="other" value={formData.other} control={<Checkbox />} label="Other" onClick={handleCheckmark}/>
                                         </Item>
                                     </Grid>
                                 </Grid>
