@@ -37,19 +37,22 @@ export default function FormCheckout() {
         extraFields: '',
         numberOfForms: 0, 
     });
+    const [errorMessage, setErrorMessage] = useState('');
 
     function handleSubmit(e) {
         e.preventDefault();
 
         if(formData.formName === '') {
-            alert('The form needs a name!');
+            setErrorMessage('The form needs a name!');
             return;
         }
 
         if(formData.other === true && formData.extraFields === '') {
-            alert('Additional fileds are required. You you want no additional fields, uncheck \'Other\'.');
+            setErrorMessage('Additional fileds are required. You you want no additional fields, uncheck \'Other\'.');
             return;
         }
+
+        setErrorMessage('');
         console.log(formData);
     }
 
@@ -154,6 +157,8 @@ export default function FormCheckout() {
                             <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ width: '20%' }}>Submit</Button>
                         </form>
                     </React.Fragment>
+                    <br/>
+                    <Typography style={{ color: 'red', fontWeight: 'bold', textAlign: 'left',  }}>{errorMessage}</Typography>
                 </Item>
             </Grid>
             <Grid xs={6}>
