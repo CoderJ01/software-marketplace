@@ -60,7 +60,7 @@ export default function FormCheckout() {
                                 value={formData.formName}
                             />
                             <FormGroup>
-                                <Typography variant="h6"style={{ textAlign: 'left' }}>Fields</Typography>
+                                <Typography variant="h6"style={{ color: '#3f51b5', textAlign: 'left' }}>Fields</Typography>
                                 <Grid container spacing={3}>
                                     <Grid xs>
                                         <Item elevation={0} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -139,13 +139,13 @@ export default function FormCheckout() {
                 <Item style={{ display: 'flex', flexDirection: 'column' }}>
                     <h2>Form Contents</h2>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6">Name: {formData.formName}</Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Name:</span> {formData.formName}</Typography>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6">Fields: {fields.map(field => { return `${field}, ` })}</Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Fields:</span> {fields.map(field => { return `${field}, ` })}</Typography>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6">Amount: {formData.amount}</Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Amount:</span> {formData.amount}</Typography>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6">Price: $50.00</Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Price:</span> $50.00</Typography>
                     <br/>
                     <Button variant="outlined" color="secondary" type="submit" style={{ marginLeft: '30%', width: '40%' }}>Confirm Order</Button>
                     <br/>
