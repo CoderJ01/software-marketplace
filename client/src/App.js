@@ -8,6 +8,7 @@ import './App.css';
 import Homepage from './Pages/Home/Home.page';
 import Software from './Pages/Software/Software.page';
 import FormCheckout from './Pages/FormCheckout/FormCheckout.component';
+import TableCheckout from './Pages/TableCheckout/TableCheckout.component';
 
 // components
 import Header from './Components/Header/Header.component';
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/sign-up' element={<RegistrationForm/>}/>
                 <Route path='/login' element={<LoginForm/>}/>
                 <Route path='/form-checkout' element={<FormCheckout/>}/>
+                <Route path='/table-checkout' element={<TableCheckout/>}/>
             </Routes>
         </BrowserRouter>
     </div>
