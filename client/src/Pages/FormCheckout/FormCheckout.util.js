@@ -60,9 +60,6 @@ export function processSubmission(formData, setErrorMessage, setFields, fields) 
             }
         }
     }
-
-    fields.filter((item, index) => fields.indexOf(item) === index);
-    console.log(formData.extraFields);
 }
 
 export function trackCheckmarks(e, formData, setFormData, setFields, fields) {
