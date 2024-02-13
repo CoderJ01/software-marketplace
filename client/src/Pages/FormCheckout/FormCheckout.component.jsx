@@ -141,7 +141,7 @@ export default function FormCheckout() {
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6">Name: {formData.formName}</Typography>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6">Fields: </Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6">Fields: {fields.map(field => { return `${field}, ` })}</Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6">Amount: {formData.amount}</Typography>
                     <br/>
