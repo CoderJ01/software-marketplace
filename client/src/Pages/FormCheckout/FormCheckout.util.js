@@ -44,6 +44,25 @@ export function processSubmission(formData, setErrorMessage, setFields, fields) 
     }
 
     setErrorMessage('');
+
+    if(formData.extraFields !== '') {
+        if(!formData.extraFields.includes(',')) {
+            if(!fields.includes(formData.extraFields)) {
+                setFields([...fields, formData.extraFields]);
+            }
+        } 
+        else {
+            let extras = formData.extraFields.split(',');
+            for(let i = 0; i < extras.length; i++) {
+                if(!fields.includes(extras[i])) {
+                    setFields([...fields, extras[i]]);
+                }
+            }
+        }
+    }
+
+    fields.filter((item, index) => fields.indexOf(item) === index);
+    console.log(formData.extraFields);
 }
 
 export function trackCheckmarks(e, formData, setFormData, setFields, fields) {
