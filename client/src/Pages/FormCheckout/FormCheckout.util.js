@@ -54,7 +54,7 @@ export function processSubmission(formData, setErrorMessage, setFields, fields) 
         else {
             let extras = formData.extraFields.split(',');
             for(let i = 0; i < extras.length; i++) {
-                if(!fields.includes(extras[i])) {
+                if(!fields.includes(extras[i]) && extras[i].trim() !== '') {
                     setFields([...fields, extras[i]]);
                 }
             }
