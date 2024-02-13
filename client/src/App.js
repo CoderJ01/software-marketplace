@@ -7,8 +7,8 @@ import './App.css';
 // Pages
 import Homepage from './Pages/Home/Home.page';
 import Software from './Pages/Software/Software.page';
-import FormCheckout from './Pages/FormCheckout/FormCheckout.component';
-import TableCheckout from './Pages/TableCheckout/TableCheckout.component';
+import FormCheckout from './Pages/FormCheckout/FormCheckout.page';
+import TableCheckout from './Pages/TableCheckout/TableCheckout.page';
 
 // components
 import Header from './Components/Header/Header.component';
