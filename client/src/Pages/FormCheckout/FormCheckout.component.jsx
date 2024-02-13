@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import { Item, number, processSubmission, trackCheckmarks } from './FormCheckout.util';
 
@@ -91,6 +92,8 @@ export default function FormCheckout() {
                                     <>
                                     <Typography variant="body" style={{ textAlign: 'left' }}>Add any additional fields you want your form to display.</Typography>
                                     <Typography variant="body" style={{ textAlign: 'left' }}>Separate the names of the fields using commas.</Typography>
+                                    <Typography variant="body" style={{ textAlign: 'left' }}>Click the submit button once for every extra field.</Typography>
+                                    <br/>
                                     <TextField 
                                         required
                                         style={{ width: '40%' }}
@@ -141,7 +144,31 @@ export default function FormCheckout() {
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Name:</span> {formData.formName}</Typography>
                     <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Fields:</span> {fields.map(field => { return `${field}, ` })}</Typography>
+                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>
+                        Fields:</span> {fields.map(field => { 
+                            if(
+                                field === 'First Name' || 
+                                field === 'Last Name' ||
+                                field === 'Email' ||
+                                field === 'Username' ||
+                                field === 'Password' ||
+                                field === 'City' ||
+                                field === 'State' ||
+                                field === 'Phone Number')
+                            {
+                                return <text>{field}, </text> 
+                            }
+                            else {
+                                return <text>
+                                    {field} 
+                                    <DeleteIcon 
+                                        style={{ color: 'red' }}
+                                        onClick={() => setFields(prev => prev.filter(item => item !== field))}
+                                    />, 
+                                </text>
+                            }
+                        })}
+                    </Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Amount:</span> {formData.numberOfForms}</Typography>
                     <br/>
