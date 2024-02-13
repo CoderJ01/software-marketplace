@@ -9,7 +9,7 @@ export const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export const number = ['1', '2', '3'];
+export const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
 export function processSubmission(formData, setErrorMessage, setFields, fields) {
     if(formData.formName === '') {
@@ -44,22 +44,25 @@ export function processSubmission(formData, setErrorMessage, setFields, fields) 
     }
 
     setErrorMessage('');
-    let fieldObj = formData.extraFields.split(',');
-    for(let i = 0; i < fieldObj.length; i++) {
-        if(fieldObj[i] !== '') {
-            setFields([...fields, fieldObj[i]]);
-        }
-    }
-    fieldObj = [];
-    console.log(fields);
 }
 
 export function trackCheckmarks(e, formData, setFormData, setFields, fields) {
     if(formData[e.target.name] === false) {
         setFormData({ ...formData, [e.target.name]: true });
-        setFields([...fields, e.target.name.toString()]);
+        if(e.target.name !== 'other') {
+            let field = e.target.name.toString().charAt(0).toUpperCase() + e.target.name.toString().substring(1, e.target.name.toString().length);
+            if(field === 'FirstName') field = 'First Name';
+            if(field === 'LastName') field = 'Last Name';
+            if(field === 'PhoneNumber') field = 'Phone Number';
+            setFields([...fields, field]);
+        }
     }
     else if(formData[e.target.name] === true) {
         setFormData({ ...formData, [e.target.name]: false });
+        let field = e.target.name.toString().charAt(0).toUpperCase() + e.target.name.toString().substring(1, e.target.name.toString().length);
+        if(field === 'FirstName') field = 'First Name';
+        if(field === 'LastName') field = 'Last Name';
+        if(field === 'PhoneNumber') field = 'Phone Number';
+        setFields(prev => prev.filter(item => item !== field));
     }
 }
