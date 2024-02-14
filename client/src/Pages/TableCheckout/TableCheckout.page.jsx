@@ -4,12 +4,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import { TextField, Button, Typography } from "@mui/material";
 import MenuItem from '@mui/material/MenuItem';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import DeleteIcon from '@mui/icons-material/Delete';
 
-import { Item, number, processSubmission, trackCheckmarks } from '../FormCheckout/FormCheckout.util';
+import { Item, number } from '../FormCheckout/FormCheckout.util';
+import { processSubmission } from './TableCheckout.util';
 
 export default function TableCheckout() {
     const [formData, setFormData] = useState({ 
@@ -19,15 +16,11 @@ export default function TableCheckout() {
         numberOfTables: 0, 
     });
     const [errorMessage, setErrorMessage] = useState('');
-    const [fields, setFields] = useState([]);
 
     function handleSubmit(e) {
         e.preventDefault();
-        processSubmission(formData, setErrorMessage, setFields, fields);
-    }
-
-    function handleCheckmark(e) {
-        trackCheckmarks(e, formData, setFormData, setFields, fields)
+        console.log(formData);
+        // processSubmission(formData, setErrorMessage);
     }
 
     return (
@@ -47,7 +40,7 @@ export default function TableCheckout() {
                                 type="text"
                                 sx={{mb: 3}}
                                 fullWidth
-                                name="formName"
+                                name="tableName"
                                 value={formData.tableName}
                             />
                             <br/>
@@ -60,7 +53,7 @@ export default function TableCheckout() {
                                 type="text"
                                 sx={{mb: 3}}
                                 fullWidth
-                                name="formName"
+                                name="columns"
                                 value={formData.columns}
                             />
                             <br/>
@@ -73,7 +66,7 @@ export default function TableCheckout() {
                                 type="text"
                                 sx={{mb: 3}}
                                 fullWidth
-                                name="formName"
+                                name="rows"
                                 value={formData.rows}
                             />
                             <br/>
@@ -87,8 +80,8 @@ export default function TableCheckout() {
                                 style={{
                                     width: '40%'
                                 }}
-                                name="numberOfForms"
-                                value={formData.numberOfForms}
+                                name="numberOfTables"
+                                value={formData.numberOfTables}
                             >
                                 {number.map((option) => (
                                     <MenuItem value={option}>
