@@ -6,6 +6,8 @@ import neonKeyboard from '../../assets/images/neon-keyboard.jpg'
 import Paper from '@mui/material/Paper';
 import '../Home/Home.style.css';
 import Link from '@mui/material/Link';
+import form from '../../assets/images/form.jpg';
+import table from '../../assets/images/table.jpg';
 
 function Software() {
   return (
@@ -38,13 +40,13 @@ function Software() {
                     }}
                     >
                         <Paper elevation={3}>
-                            <img src="" alt="" style={{ height: '75%', width: '100%', border: '2px solid blue' }}/>
+                            <img src={form} alt="" style={{ height: '75%', width: '100%' }}/>
                             <Link href="/form-checkout" variant="body" gutterBottom style={{ display: 'flex', fontWeight: 'bold', justifyContent:'center' }}>
                                 Forms
                             </Link>
                         </Paper>
                         <Paper elevation={3}>
-                            <img src="" alt="" style={{ height: '75%', width: '100%', border: '2px solid blue' }}/>
+                            <img src={table} alt="" style={{ height: '75%', width: '100%' }}/>
                             <Link href="/table-checkout" variant="body" gutterBottom style={{ display: 'flex', fontWeight: 'bold', justifyContent:'center' }}>
                                 Tables
                             </Link>
