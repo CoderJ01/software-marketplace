@@ -12,8 +12,7 @@ export default function TableCheckout() {
     const [formData, setFormData] = useState({ 
         tableName: '', 
         columns: '',
-        rows: '',
-        numberOfTables: 0, 
+        rows: ''
     });
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -71,26 +70,6 @@ export default function TableCheckout() {
                                 value={formData.rows}
                             />
                             <br/>
-                            <TextField
-                                id="outlined-select-currency"
-                                select
-                                label="Number of Forms"
-                                onChange={(e) => setFormData({ ...formData, [e.target.name]: parseInt(e.target.value)})}
-                                defaultValue="EUR"
-                                helperText="Select the number of forms desired"
-                                style={{
-                                    width: '40%'
-                                }}
-                                name="numberOfTables"
-                                value={formData.numberOfTables}
-                            >
-                                {number.map((option) => (
-                                    <MenuItem value={option}>
-                                    {option}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                            <br/>
                             <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '40%', width: '20%' }}>Submit</Button>
                         </form>
                     </React.Fragment>
@@ -107,8 +86,6 @@ export default function TableCheckout() {
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Columns:</span> {formData.columns}</Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Rows:</span> {formData.rows}</Typography>
-                    <br/>
-                    <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Amount:</span> {formData.numberOfTables}</Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Price:</span> $50.00</Typography>
                     <br/>
