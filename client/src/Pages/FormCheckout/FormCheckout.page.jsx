@@ -42,8 +42,8 @@ export default function FormCheckout() {
 
     return (
         <Box sx={{ width: '100%' }} style={{ marginTop: '100px', paddingBottom: '5vh' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid xs={6}>
+        <Grid container sx={{ flexDirection: { xs: 'column', md: 'row'} }} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid xs={10} md={6}>
                 <Item>
                     <React.Fragment>
                         <form autoComplete="off" style={{ display: 'flex', flexDirection: 'column'}}>
@@ -138,7 +138,7 @@ export default function FormCheckout() {
                     <Typography style={{ color: 'red', fontWeight: 'bold', textAlign: 'left',  }}>{errorMessage}</Typography>
                 </Item>
             </Grid>
-            <Grid xs={6}>
+            <Grid xs={10} md={6}>
                 <Item style={{ display: 'flex', flexDirection: 'column' }}>
                     <h2>Form Contents</h2>
                     <br/>
