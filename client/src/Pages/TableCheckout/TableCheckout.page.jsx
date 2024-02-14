@@ -19,8 +19,7 @@ export default function TableCheckout() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(formData);
-        // processSubmission(formData, setErrorMessage);
+        processSubmission(formData, setErrorMessage);
     }
 
     return (
@@ -44,6 +43,7 @@ export default function TableCheckout() {
                                 value={formData.tableName}
                             />
                             <br/>
+                            <Typography style={{ textAlign: 'left' }}variant="body2"> Separate desired columns using commas.</Typography>
                             <TextField 
                                 label="Columns"
                                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
@@ -57,6 +57,7 @@ export default function TableCheckout() {
                                 value={formData.columns}
                             />
                             <br/>
+                            <Typography style={{ textAlign: 'left' }}variant="body2"> Separate desired rows using commas.</Typography>
                             <TextField 
                                 label="Rows"
                                 onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
@@ -99,7 +100,7 @@ export default function TableCheckout() {
             </Grid>
             <Grid xs={6}>
                 <Item style={{ display: 'flex', flexDirection: 'column' }}>
-                    <h2>Form Contents</h2>
+                    <h2>Table Contents</h2>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Name:</span> {formData.tableName}</Typography>
                     <br/>
