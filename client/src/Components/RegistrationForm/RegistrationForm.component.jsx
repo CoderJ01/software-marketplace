@@ -93,11 +93,11 @@ const RegistrationForm = () => {
                       </Grid>
                       <Grid item xs={12} sm={6} md={6}>
                         <Field
-                          label="Country"
+                          label="State"
                           variant="outlined"
                           fullWidth
-                          name="country"
-                          value={values.country}
+                          name="state"
+                          value={values.state}
                           component={TextField}
                         />
                       </Grid>

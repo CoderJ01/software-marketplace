@@ -22,7 +22,7 @@ export const initialValues = {
     lastName: "",
     occupation: "",
     city: "",
-    country: "",
+    state: "",
     email: "",
     password: "",
 }
