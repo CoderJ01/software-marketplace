@@ -45,9 +45,9 @@ function Software() {
                         </Paper>
                         <Paper elevation={3}>
                             <img src="" alt="" style={{ height: '75%', width: '100%', border: '2px solid blue' }}/>
-                            <Typography variant="body" gutterBottom style={{ display: 'flex', fontWeight: 'bold', justifyContent:'center' }}>
-                                Product Title
-                            </Typography>
+                            <Link href="/table-checkout" variant="body" gutterBottom style={{ display: 'flex', fontWeight: 'bold', justifyContent:'center' }}>
+                                Tables
+                            </Link>
                         </Paper>
                 </Box>
             </Box>
