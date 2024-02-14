@@ -3,9 +3,8 @@ import { useState } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import { TextField, Button, Typography } from "@mui/material";
-import MenuItem from '@mui/material/MenuItem';
 
-import { Item, number } from '../FormCheckout/FormCheckout.util';
+import { Item } from '../FormCheckout/FormCheckout.util';
 import { processSubmission } from './TableCheckout.util';
 
 export default function TableCheckout() {
@@ -70,7 +69,7 @@ export default function TableCheckout() {
                                 value={formData.rows}
                             />
                             <br/>
-                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '40%', width: '20%' }}>Submit</Button>
+                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '35%', width: '30%' }}>Confirm Order</Button>
                         </form>
                     </React.Fragment>
                     <br/>
@@ -88,8 +87,6 @@ export default function TableCheckout() {
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Rows:</span> {formData.rows}</Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Price:</span> $50.00</Typography>
-                    <br/>
-                    <Button variant="outlined" color="secondary" type="submit" style={{ marginLeft: '30%', width: '40%' }}>Confirm Order</Button>
                     <br/>
                 </Item>
             </Grid>

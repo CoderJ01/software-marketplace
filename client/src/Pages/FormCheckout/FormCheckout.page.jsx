@@ -131,7 +131,7 @@ export default function FormCheckout() {
                                 ))}
                             </TextField>
                             <br/>
-                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '40%', width: '20%' }}>Submit</Button>
+                            <Button onClick={handleSubmit} variant="outlined" color="secondary" type="submit" style={{ marginLeft: '35%', width: '30%' }}>Confirm Order</Button>
                         </form>
                     </React.Fragment>
                     <br/>
@@ -173,8 +173,6 @@ export default function FormCheckout() {
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Amount:</span> {formData.numberOfForms}</Typography>
                     <br/>
                     <Typography style={{ textAlign: 'left' }} variant="h6"><span style={{ color: '#3f51b5' }}>Price:</span> $50.00</Typography>
-                    <br/>
-                    <Button variant="outlined" color="secondary" type="submit" style={{ marginLeft: '30%', width: '40%' }}>Confirm Order</Button>
                     <br/>
                 </Item>
             </Grid>
