@@ -1,7 +1,0 @@
-/* Mobile View */
-@media screen and (max-width: 980px) {
-    .forms {
-        display: flex;
-        flex-direction: column;
-    }
-}
