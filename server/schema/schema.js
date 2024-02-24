@@ -1,28 +1,47 @@
 const typeDefs = `
-  type Book {
-    title: String
-    author: String
+  type User {
+    userID: String!
+    firstName: String!
+    lastName: String!
+    industry: String!
+    city: String!
+    state: String!
+    email: String!
+    password: String!
+    username: String
+    token: String
   }
 
   type Query {
-    books: [Book]
+    users: [User]
+  }
+
+  type Form {
+    name: String!
+    fields: String!
+    amount: Int!
+    price: Float!
+  }
+
+  type Query {
+    forms: [Form]
+  }
+
+  type Table {
+    name: String!
+    columns: String!
+    rows: String!
+    price: Float!
+  }
+
+  type Query {
+    tables: [Table]
   }
 `;
 
-const books = [
-    {
-      title: 'The Awakening',
-      author: 'Kate Chopin',
-    },
-    {
-      title: 'City of Glass',
-      author: 'Paul Auster',
-    },
-];
-
 const resolvers = {
     Query: {
-      books: () => books,
+      // books: () => books,
     },
 };
 
