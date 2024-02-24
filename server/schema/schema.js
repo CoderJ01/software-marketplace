@@ -14,19 +14,11 @@ const typeDefs = `
     token: String
   }
 
-  type Query {
-    users: [User]
-  }
-
   type Form {
     name: String!
     fields: String!
     amount: Int!
     price: Float!
-  }
-
-  type Query {
-    forms: [Form]
   }
 
   type Table {
@@ -37,6 +29,8 @@ const typeDefs = `
   }
 
   type Query {
+    users: [User]
+    forms: [Form]
     tables: [Table]
   }
 `;
