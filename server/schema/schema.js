@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const Form = require('../models/Form');
+const Table = require('../models/Table');
 
 const typeDefs = `
   type User {
@@ -40,6 +42,14 @@ const resolvers = {
       // find all users
       users: () => {
         return User.find();
+      },
+      // find all forms
+      forms: () => {
+        return Form.find();
+      },
+      // find all tables
+      tables: () => {
+        return Table.find();
       }
     },
 };
