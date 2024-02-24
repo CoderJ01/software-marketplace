@@ -35,6 +35,8 @@ const typeDefs = `
     forms: [Form]
     tables: [Table]
     user(userID: String!): User
+    form(formID: String!): Form
+    table(tableID: String!): Table
   }
 `;
 
