@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
+const uuid = require('uuid');
 
 const FormSchema = new mongoose.Schema(
-    {
+    {   
+        formID: {
+            type: mongoose.Schema.Types.UUID,
+            required: true,
+            default: uuid.v4(),
+            unique: true
+        },
         name: {
             type: String,
             required: true
