@@ -39,18 +39,18 @@ const typeDefs = `
 
 const resolvers = {
     Query: {
-      // find all users
-      users: () => {
-        return User.find();
-      },
-      // find all forms
-      forms: () => {
-        return Form.find();
-      },
-      // find all tables
-      tables: () => {
-        return Table.find();
-      }
+      // // find all users
+      // users: () => {
+      //   return User.find({});
+      // },
+      // // find all forms
+      // forms: () => {
+      //   return Form.find();
+      // },
+      // // find all tables
+      // tables: () => {
+      //   return Table.find();
+      // }
     },
 };
 
