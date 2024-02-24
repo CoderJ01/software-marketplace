@@ -39,6 +39,9 @@ const UserSchema = new mongoose.Schema(
         username: {
             type: String
         },
+        balance: {
+            type: mongoose.Types.Decimal128
+        },
         token: {
             type: String
         }
