@@ -1,12 +1,9 @@
-const { ApolloServer } = require('@apollo/server');
-const { startStandaloneServer } = require('@apollo/server/standalone');
-
 const typeDefs = `
   type Book {
     title: String
     author: String
   }
-  
+
   type Query {
     books: [Book]
   }
