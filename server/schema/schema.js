@@ -1,3 +1,5 @@
+const User = require('../models/User');
+
 const typeDefs = `
   type User {
     userID: String!
@@ -41,7 +43,10 @@ const typeDefs = `
 
 const resolvers = {
     Query: {
-      // books: () => books,
+      // find all users
+      users: () => {
+        return User.find();
+      }
     },
 };
 
