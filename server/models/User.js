@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
-import {v4 as uuidv4} from 'uuid';
+const uuid = require('uuid');
 
 const UserSchema = new mongoose.Schema(
     {
         userID: {
             type: mongoose.Schema.Types.UUID,
             required: true,
-            default: uuidv4()
+            default: uuid.v4(),
+            unique: true
         },
         firstName: {
             type: String,
